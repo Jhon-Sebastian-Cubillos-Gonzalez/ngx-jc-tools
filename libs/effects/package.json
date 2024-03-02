@@ -1,0 +1,34 @@
+{
+  "name": "@ngx-jc-tools/effects",
+  "version": "1.0.1",
+  "description": "Angular nasty effects",
+  "author": {
+    "name": "Jhon Sebastian Cubillos Gonzalez",
+    "email": "sebaspk1999@gmail.com",
+    "url": "https://github.com/Jhon-Sebastian-Cubillos-Gonzalez"
+  },
+  "typings": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jhon-Sebastian-Cubillos-Gonzalez/ng-libraries.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Jhon-Sebastian-Cubillos-Gonzalez/ng-libraries/issues"
+  },
+  "homepage": "https://github.com/Jhon-Sebastian-Cubillos-Gonzalez/ng-libraries/tree/master/solutions/libs/effects#readme",
+  "peerDependencies": {
+    "@angular/common": "^17.2.0",
+    "@angular/core": "^17.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false,
+  "keywords": [
+    "angular",
+    "effects",
+    "skew",
+    "ngx",
+    "glow"
+  ]
+}

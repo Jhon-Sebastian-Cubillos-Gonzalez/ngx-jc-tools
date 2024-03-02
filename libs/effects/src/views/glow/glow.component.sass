@@ -1,0 +1,43 @@
+::ng-deep
+  ngx-glow-card
+    -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC)
+    display: block
+    overflow: hidden
+    z-index: 1
+    position: relative
+
+    .glow-cotainer
+      padding: var(--glow-border, 5px)
+      background-image: radial-gradient(var(--glow-size) var(--glow-size) at var(--glow-x, 0) var(--glow-y, 0), var(--glow-border-color, #b0b0b05e) 1%, var(--glow-border-color, #b0b0b05e) 100%)
+      border-radius: var(--glow-border-radius, 0px)
+      -webkit-transition: all var(--glow-transition-speed, 1.2s) ease-in-out
+      transition: all var(--glow-transition-speed, 1.2s) ease-in-out
+
+      .glow-content
+        background-color: var(--glow-bg, #ffff)
+        border-radius: calc( var(--glow-border-radius, 1px) - 1px )
+        z-index: 1
+
+      [data-target="glow-card.aura"]
+        background-color: var(--glow-color)
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0px, rgba(0, 0, 0, 0.4) 0px)
+        bottom: 0px
+        filter: blur(calc( var(--glow-size) / 2 ))
+        height: var(--glow-size)
+        opacity: 0
+        position: absolute
+        right: 0px
+        transform: matrix(1, 0, 0, 1, var(--off-glow-x, 0), var(--off-glow-y, 0))
+        transition-duration: var(--glow-transition-speed, 1.2s)
+        transition-property: opacity
+        transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1)
+        width: var(--glow-size)
+        z-index: 0
+        pointer-events: none
+
+    &:hover
+      .glow-cotainer
+        background-image: radial-gradient(var(--glow-size) var(--glow-size) at var(--glow-x, 0) var(--glow-y, 0), var(--glow-color) 1%, var(--glow-border-color, #b0b0b05e) 100%)
+
+        [data-target="glow-card.aura"]
+          opacity: 0.85
